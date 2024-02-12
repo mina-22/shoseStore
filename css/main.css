@@ -1,0 +1,1027 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .5s;
+}
+.dropdownn {
+    display: none;
+}
+li {
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+}
+
+li:hover {
+    color: black;
+}
+
+.nav-bar {
+    position: relative;
+    color: #797272a9;
+
+}
+
+.list2-nav {
+    position: absolute;
+    right: 0;
+}
+
+.fa-bag-shopping {
+    font-size: 25px;
+    margin: 0 10px;
+    color: black;
+}
+
+.fa-user {
+    font-size: 25px;
+    color: black;
+}
+.container-navbar {
+    display: flex;
+}
+.drop-navbar {
+    font-size: 40px;
+}
+main {
+    width: 90%;
+    margin: auto;
+}
+/* ---------------------------------------------------------------- */
+.sec1 {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.parent1 {
+    background-image: url("../img2/recycled-shoe-store-hero-image-bg\ \(1\).jpg");
+    background-position: top;
+    background-size: cover;
+    color: white;
+    height: 800px;
+
+}
+
+.parent1 h1 {
+    width: 45%;
+    font-size: 70px;
+
+}
+
+.parent1 p {
+    width: 45%;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.btns-sec1 {
+    width: 150px;
+    height: 50px;
+    margin: 15px;
+    font-weight: 500;
+    border: none;
+    transition: all .5s;
+}
+
+.btns-sec1:hover {
+    background-color: black;
+    color: white;
+}
+
+/* -------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- */
+
+.sec3 {
+    
+    margin-top: 100px;
+}
+
+.img-sec3 {
+    width: 50%;
+}
+
+.text-sec3 {
+    width: 35%;
+    margin-left: 40px;
+}
+
+.parent3 {
+    display: flex;
+    align-items: center;
+}
+
+.p1-sec3 {
+    font-size: 15px;
+    color: orange;
+    font-weight: 500;
+}
+
+.text-sec3 h2 {
+    font-size: 40px;
+    margin: 30px 0;
+
+}
+
+.p2-sec3 {
+    color: #abb8c3;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.link-sec3 {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.underline-link {
+    background-color: orange;
+    height: 2px;
+    width: 20%;
+    transition: all .5s;
+}
+
+.link-parent:hover .underline-link {
+    background-color: black;
+}
+
+.link-parent:hover .link-sec3 {
+    color: black;
+}
+
+/* ---------------------------------------------------- */
+.sec4 {
+    background-color: #f1f1ef;
+    /* height: 900px; */
+    margin-top: 75px;
+}
+
+.parent4 .text-sec4 {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.parent4 .text-sec4 h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.parent4 .text-sec4 p {
+    font-size: 20px;
+
+    color: #abb8c3;
+}
+
+.bottom-sec4 {
+    margin-top: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cards-bottom-sec4 {
+    width: 19%;
+
+}
+
+.card-bottom-sec4 {
+    margin: 15% 0;
+
+}
+
+.card-bottom-sec4 p {
+
+    color: #abb8c3;
+}
+
+/* ------------------------------------------------------ */
+.sec5 {
+    /* height: 140vh; */
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.text-sec5 {
+    justify-content: space-between;
+}
+
+.text-sec5 p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.underline-p-sec5 {
+    height: 2px;
+    background-color: orange;
+    width: 100%;
+    float: right;
+    width: 16%;
+    transition: all .5s;
+}
+
+.underline-p-sec5:hover {
+    background-color: black;
+}
+
+.card-sec5 {
+    text-align: center;
+}
+
+.p1-text-sec5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-card-sec5 {
+    margin-top: 10px;
+}
+
+.p2-text-sec5 {
+    color: #abb8c3;
+}
+
+.img-card-sec5 {
+    position: relative;
+}
+
+.under-card {
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.img-card-sec5:hover .under-card {
+    opacity: 1;
+}
+
+/* ---------------------------------------------------------------------- */
+.sec6 {
+    /* height: 90vh; */
+    margin-top: 5%;
+}
+
+.cards-sec6 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card1-sec6 {
+    height: 600px;
+    width: 49%;
+    background-image: url(../img2/recycled-shoe-store-shop-men-image-thumbnail.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+}
+
+.card2-sec6 {
+    height: 600px;
+    width: 49%;
+    background-image: url(../img2/recycled-shoe-store-shop-women-image-tumbnail.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.text-sec6 > p {
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.text-sec6 button {
+    width: 170px;
+    height: 60px;
+    background-color: transparent;
+    border: solid white;
+    color: white;
+    transition: all .5s;
+}
+
+.text-sec6 button:hover {
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+/* ---------------------------------------------------------- */
+
+.sec7 {
+    /* height: 210vh; */
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+/* ALL STYLE REUSE FROM SEC5 */
+/* --------------------------------------------------------- */
+.sec8 {
+    margin-top: 100px;
+
+}
+.parent8 {
+    display: flex;
+}
+.left-sec8 {
+    width: 40%;
+    margin-top: 100px;
+    color: #abb8c3;
+    font-size: 20px;
+}
+
+.left-sec8 p {
+    margin-bottom: 50px;
+}
+
+.right-sec8 {
+    width: 300px;
+    height: 300px;
+    border: dotted black;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+
+.parent8 {
+    justify-content: space-around;
+    background-color: #f1f1ef;
+    height: 450px;
+
+}
+
+.logo-sec8 {
+    width: 20%;
+}
+
+.logos-sec8 {
+    justify-content: space-between;
+}
+
+/* ----------------------------------------------------------------- */
+.sec9 {
+    /* height: 500px; */
+    margin-top: 100px;
+}
+
+.parent9 h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.users-sec9 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.user-sec9 {
+    height: 250px;
+    width: 30%;
+    border: solid #babab1 1px;
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.img-user {
+    width: 100%;
+    height: 50px;
+    font-weight: lighter;
+}
+
+.img-user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.img-user p {
+    margin-top: 10px;
+}
+
+.reviews-sec9 {
+    margin-top: 20px;
+    color: #babab1;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------- */
+.last-sec {
+    background-image: url(../img2/back-sec10.jpg);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.last-parent {
+    height: 100%;
+    margin-top: 75px;
+}
+
+.text-last-sec h2 {
+    font-size: 70px;
+    color: white;
+}
+
+.text-last-sec p {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.btn-last-sec {
+    width: 150px;
+    height: 50px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    background-color: white;
+    border-color: black;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.btn-last-sec:hover {
+    background-color: black;
+    color: white;
+}
+
+/* ------------------------------------------------- */
+footer {
+    /* height: 400px; */
+
+}
+
+.part1-foot .logo-foot {
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+.part1-foot {
+    width: 20%;
+    position: relative;
+}
+
+.parent-foot {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-evenly;
+}
+
+.part1-foot p {
+    color: #a9a99b;
+    font-size: 20px;
+}
+
+.part1-foot a:hover {
+    color: black;
+
+}
+
+.part1-foot h3 {
+    margin-bottom: 50px;
+}
+
+.social-media-accounts {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+    
+}
+
+.social-media-accounts i {
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.social-media-accounts i:hover {
+    color: #fcb900;
+}
+
+/* -------------------------------------------- */
+
+@media screen and (max-width:992px) {
+    
+    .nav-bar {
+        height: 70px;
+    }
+
+    .list2-nav {
+        left: 240px;
+        bottom: 0;
+    }
+  
+    .sec1 {
+        height: 100%;
+        width: 100%;
+    }
+
+    .card-sec5 {
+        width: 49%;
+    }
+
+    .text-last-sec h2 {
+        font-size: 50px;
+    }
+
+    .btn-last-sec {
+        width: 190px;
+    }
+
+    .part1-foot .logo-foot {
+        width: 80%;
+    }
+
+    .social-media-accounts {
+        width: 70%;
+
+        position: absolute;
+        bottom: 0;
+        justify-content: space-between;
+    }
+
+    
+
+    .parent1 h1 {
+        width: 60%;
+        font-size: 80px;
+    }
+
+    .btns-sec1 {
+        width: 200px;
+    }
+
+    .parent3 {
+        width: 100%;
+        height: 500px;
+    }
+
+    .img-sec3 {
+        width: 40%;
+    }
+
+    .text-sec3 {
+        width: 60%;
+    }
+
+    .sec4 {
+        height:190%;
+    }
+    .img-bottom-sec4 {
+        width: 30%;
+        position: absolute;
+        top:-120px;
+    }
+    .bottom-sec4 {
+        position: relative;
+    }
+    .parent4 .text-sec4  h2{
+        font-size: 70px;
+      }
+     .parent4 .text-sec4  p{
+        font-size: 25px;
+        
+     }
+
+    .text-sec5 {
+        font-size: 25px;
+    }
+
+    .underline-p-sec5 {
+        width: 24%;
+    }
+
+ 
+
+    .card1-sec6 {
+        height: 500px;
+
+    }
+
+    .card2-sec6 {
+        height: 500px;
+    }
+
+    .logo-sec8 {
+        width: 30%;
+    }
+
+    .parent9 {
+        width: 100%;
+    }
+
+    .user-sec9 {
+        width: 32%;
+    }
+}
+@media screen and (max-width:768px) {
+   
+    nav {
+        display: none;
+    }
+    .dropdownn {
+        display:block;
+
+    }
+    
+   .sec1 {
+    text-align: center;
+   }
+   .parent1 h1 {
+    width: 100%;
+    font-size: 72px;
+
+   }
+   .parent1 p {
+    width: 100%;
+    font-size: 25px;
+    margin: 30px 0;
+   }
+   .btns-sec1 {
+    width: 180px;
+    height: 60px;
+  }
+  .img-sec3 {
+   width: 100%;
+   margin-bottom: 100px;
+  }
+  .text-sec3 {
+   width: 100%;
+   
+  }
+  .text-sec3 h2{
+   font-size: 50px;
+   text-align: center;
+   }
+  .text-sec3 p{
+    
+   font-size: 25px;
+   
+   }
+.parent3 {
+    display: block;
+ 
+}
+.sec3 {
+    margin-top: 25%;
+    height: 150vh;
+}
+.sec4{
+    height: 300%;
+}
+.bottom-sec4{
+    text-align: center;
+    display: block !important;
+}
+.cards-bottom-sec4 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-sec4 h3{
+    font-size: 35px;
+}
+.bottom-sec4 p{
+    font-size: 30px;
+}
+.img-bottom-sec4 {
+    width: 100%;
+    position: static;
+}
+ 
+
+.card-sec5 {
+    width: 100%;
+    margin-top: 50px;
+}
+.sec6 {
+    height: 140%;
+    margin-top: 15%;
+}
+.cards-sec6 {
+    display: block;
+}
+.card1-sec6 {
+    width: 100%;
+   margin:30px 0;
+}
+.card2-sec6 {
+    width: 100%;
+}
+.cards-sec6 p {
+    font-size: 35px;
+}
+.parent8 {
+    height: 100%;
+    display: block;
+    
+}
+.sec8 {
+    height: 150vh;
+}
+.left-sec8 {
+    width: 100%;
+    width: 95%;
+    margin: auto;
+   padding-top:50px;
+   text-align: center;
+   font-size: 25px;
+}
+.right-sec8 {
+    text-align: center;
+    padding-top: 80px;
+    width: 80%;
+    margin: auto;
+    border: none;
+}
+.parent9 h2{
+   font-size:41px;
+}
+
+.sec9 {
+    height: 145%;
+
+}
+.users-sec9 {
+    display: block;
+}
+.user-sec9 {
+    width: 100%;
+  margin-top: 30px;
+}
+.user-sec9 p {
+   font-size: 25px;
+}
+.text-last-sec h2 {
+    font-size: 55px;
+    text-align: center;
+}
+/* ------------------------------------------- */
+ footer {
+   height: 150%;
+   position: relative;
+ }
+  .part1-foot {
+    text-align: center;
+    width: 46%;
+    display: inline-block;
+    margin-top: 50px;
+
+  }
+  .part1-foot p{
+    font-size: 25px;
+
+  }
+  .part1-foot h3{
+    font-size: 35px;
+
+  }
+  .parent-foot {
+    display: inline-block;
+  }
+  
+  .social-media-accounts {
+    bottom: -470px;
+    text-align: center;
+    font-size: 30px;
+   width: 100%;
+  }
+  .logo-foot {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width:600px){
+
+   .logo-nav {
+      width: 100% ;
+   }
+   .container-navbar {
+    display: block ;
+   }
+   .drop-navbar {
+    font-size: 60px;
+    margin-top: 25px;
+   }
+   /* ------------------------------------- */
+   .btn-last-sec {
+    width: 70%;
+    height: 70px;
+    margin: 25px;
+    margin-left: calc(30%/2);
+}
+.btns-last-sec {
+    display: block !important;
+    
+}
+/* ----------------------------------------- */
+   footer {
+    height: 300%;
+    position: relative;
+  }
+   .part1-foot {
+     text-align: center;
+     width: 100%;
+     margin-top: 70px;
+   }
+   .part1-foot p{
+     font-size: 40px;
+     
+   }
+   .part1-foot h3{
+    font-size: 50px;
+  }
+  .social-media-accounts {
+    bottom: -1800px;
+    
+    font-size: 40px;
+   width: 100%;
+  }
+  .logo-foot {
+    margin-left: 20px;
+  }
+
+  /* --------------------------- */
+    .parent1 {
+        margin-bottom: 50px;
+    }
+   .parent1 h1 {
+    width: 100%;
+    font-size: 75px;
+
+   }
+   .parent1 p {
+    width: 100%;
+    font-size: 30px;
+    margin: 30px 0;
+   }
+   .btns-sec1 {
+    width:95%;
+    height: 70px;
+    display: block;
+    margin-bottom: 30px;
+   
+  }
+  /* ------------------------------- */
+   .text-sec3 {
+      padding-right: 25px;
+   }
+   .text-sec3 h2{
+    font-size: 60px;
+    margin-right: 30px;
+   }
+   .text-sec3 p{ 
+    font-size: 35px;
+    margin-top: 20px;
+    }
+ 
+ .sec3 {
+    height:150vh;
+     padding-top: 15%;
+     margin-bottom: 10%;
+     
+    }
+ .link-parent {
+    font-size: 20px;
+ }
+ .underline-link {
+    width: 25%;
+ }
+ /* ------------------------------------------ */
+ .sec4{
+    height: 320%;
+    margin-top: 25%;
+ }
+ /* --------------------------------------- */
+.card-sec5 {
+    width: 100%;
+    margin-top: 50px;
+    
+}
+.text-sec5 h4 {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.text-sec5 p {
+    text-align: center;
+    font-size: 18px;
+}
+.underline-p-sec5 {
+    width: 40%;
+}
+.p1-text-sec5 {
+    font-size: 28px;
+}
+.p2-text-sec5 {
+    font-size: 20px;
+}
+/* ------------------------------- */
+.text-sec6 p{
+    font-size: 75px;
+}
+.text-sec6 {
+    width: 100%;
+}
+.text-sec6 button {
+    width: 70%;
+    height: 70px;
+    font-size: 25px;
+}
+/* -------------------------------------------- */
+.sec8 {
+    height: 120vh;
+}
+ .parent8 {
+    height: 100%;
+ }
+.parent9 h2{
+    font-size:50px;
+ }
+ 
+ .sec9 {
+     height: 220%;
+ 
+ }
+ .user-sec9 {
+     width: 100%;
+   margin-top: 30px;
+   height: 33.3%;
+   
+}
+ .user-sec9 p {
+    font-size: 25px;
+ }
+ .right-sec8 {
+    width: 40%;
+ }
+ .drop-navbar i{
+    
+    font-size: 50px;
+}
+.drop-navbar li{
+    
+    font-size: 30px;
+}
+
+}
+@media screen and (max-width:400px) {
+    .sec1 {
+
+        height: 200vh;
+    }
+    .parent1 {
+        padding-top: 10%;
+        height: 100%;
+    }
+    .last-sec p {
+        font-size: 25px;
+        margin-bottom: 15%;
+    }
+    .last-sec {
+        height: 100vh;
+    }
+    .parent3 {
+        margin-bottom: 15%;
+    }
+    .card2-sec6 .text-sec6 p{
+        font-size: 55px;
+    }
+    .img-user p{
+      font-size: 18px;
+    }
+ 
+}
+@media screen and (max-width:290px){
+ 
+    .social-media-accounts {
+   
+        bottom: -1950px;
+        font-size: 50px;
+         width: 100%;
+         
+    }
+    
+}
+ 
