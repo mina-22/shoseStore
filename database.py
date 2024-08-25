@@ -19,6 +19,18 @@ def get_user(connection, username):
     cursor.execute(query, (username,))
     return cursor.fetchone()
 
+def add_product(connection,name,price,saleprice,photo,sale):
+    cursor = connection.cursor()
+    query = '''INSERT INTO products (product_name,image_path,price,sale_price,on_sale) VALUES (?,?,?,?,?)'''
+    cursor.execute(query, (name,photo, price,saleprice,sale))
+    connection.commit()
+
+# def get_products(connection):
+#     cursor = connection.cursor()
+#     query= ''' SELECT * FROM products '''
+#     cursor.execute(query)
+#     return cursor.fetchone()
+
 # cursor.execute('''
 #     CREATE TABLE IF NOT EXISTS products(
 #     product_id INTEGER PRIMARY KEY NOT NULL,
@@ -71,10 +83,17 @@ def get_user(connection, username):
 # )
 
 # cursor.execute('''
-#     DELETE FROM users WHERE user_id = 2;
+#     DELETE FROM products WHERE product_id =3;
     
 # '''
 # )
 
+# cursor.execute('''
+#     UPDATE users
+# SET admin = 1
+# WHERE user_id = 4 or user_id = 5;
+   
+# '''
+# )
 
 connection.commit()

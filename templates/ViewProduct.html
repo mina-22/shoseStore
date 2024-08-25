@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../static/css/adminstyle.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="../static/img2/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">MiniShop</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="./adminDashborad">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li><a href="./AddProduct">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Add Product</span>
+                </a></li>
+                <li><a href="./ViewProduct">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">View Product</span>
+                </a></li>
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="./Login">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="../static/img2/profile.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">All Product</span>
+                </div>
+            </div>
+            <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td class="table-light">id</td>
+                                <td class="table-light">Name</td>
+                                <td class="table-light">price</td>
+                                <td class="table-light">sale price</td>
+                                <td class="table-light">operation</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in Products %}
+                                <tr>
+                                    <td>{{product.product_id}}</td>
+                                    <td>{{product.product_name}}</td>
+                                    <td>{{product.price}}</td>
+                                    <td>{{product.sale_price}}</td>
+                                    <td>
+                                        <a class="btn btn-success" role="button">
+                                            <span class="material-symbols-outlined">
+                                                add
+                                            </span>
+                                        </a>
+                                        <a class="btn btn-danger " href="{{ url_for('DeleteProduct',id=product.product_id)}}" role="button">
+                                            <span class="material-symbols-outlined">
+                                                delete
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+               
+            </div>
+        </div>
+    </section>
+    <script src="../static/JS/bootstrap.bundle.min.js"></script>
+    <script src="../static/JS/adminscript.js"></script>
+</body>
+</html>
