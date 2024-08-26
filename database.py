@@ -30,6 +30,15 @@ def search_products(connection, search_query):
     query = '''SELECT * FROM products WHERE product_name LIKE ?'''
     cursor.execute(query,(f"%{search_query}%",))
     return cursor.fetchall()
+
+def add_comment(connection, userid, name, email,message):
+    cursor = connection.cursor()
+    cursor.execute('''
+                  INSERT INTO comments (user_id, name, email, message)
+                   Values(?, ?, ?,?)
+                   ''',(userid, name, email, message))
+    connection.commit()
+
 # def get_products(connection):
 #     cursor = connection.cursor()
 #     query= ''' SELECT * FROM products '''
