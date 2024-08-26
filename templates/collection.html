@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/women.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
 </head>
@@ -18,7 +19,7 @@
         <span class="dropdownn container">
             <div class=" container-navbar mt-3 mb-5 ">
                 <div class="logo-nav " >
-                    <a href="./"><img src="img2/site-logo.svg" alt="this is photo"></a>
+                    <a href="./"><img src="../static/img2/site-logo.svg" alt="this is photo"></a>
 
                 </div>
 
@@ -32,8 +33,8 @@
                         <li><a class="dropdown-item" href="lookbook.html">LOOKBOOK</a></li>
                         <li><a class="dropdown-item" href="sale.html">SALE</a></li>
                         <li><a class="dropdown-item" href="ourStory.html">OUR STORY</a></li>
-                        <li><a class="dropdown-item" href="contact.html">CONTACT</a></li>
-                        <li><a class="dropdown-item" href="contact.html"><i class="fa-solid fa-bag-shopping "></i> <i
+                        <li><a class="dropdown-item" href="./Contact">CONTACT</a></li>
+                        <li><a class="dropdown-item" href="./Contact"><i class="fa-solid fa-bag-shopping "></i> <i
                                     class="fa-solid fa-user"></i></a></li>
 
                     </ul>
@@ -45,7 +46,7 @@
 
             <div class="nav-bar d-flex container mt-5">
                 <div class="logo-nav">
-                    <a href="./"><img src="img2/site-logo.svg" alt="this is photo"></a>
+                    <a href="./"><img src="../static/img2/site-logo.svg" alt="this is photo"></a>
                 </div>
                 <div class="list-nav ms-4">
                     <ul class="d-flex">
@@ -67,7 +68,7 @@
                         <a href="ourStory.html">
                             <li>OUR STORY</li>
                         </a>
-                        <a href="contact.html">
+                        <a href="./Contact">
                             <li>CONTACT</li>
                         </a>
                         <li><i class="fa-solid fa-bag-shopping "></i></li>
@@ -92,10 +93,15 @@
                                 <p>Showing all {{count}} Items</p>
                             </div>
                         </div>
-                        <div class="search-box">
-                            <i class="uil uil-search"></i>
-                            <input type="text" placeholder="Search here...">
-                        </div>
+                        <form class="search-box" method="post" action="/Collection">
+                            <input 
+                            type="text" 
+                            class="form-control"       
+                            required
+                            name="search_query"
+                            placeholder="Search here...">
+                            <button type="submit"><i class="uil uil-search"></i></button>
+                        </form>
                         <div class="right-top-sec1 d-flex">
                             <div class="d-flex icons-sec1 mt-2">
                                 <i class="fa-regular fa-image me-3" id="cardShow"></i>
@@ -109,7 +115,7 @@
                         <div class="card-sec5 col-4 items card" >
                             <div class="img-card-sec5 img-card">
                                 <img src={{"../static/img2/" + product.image_path}} alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
+                                <div class="under-card d-flex align-items-center justify-content-center"><button>Buy Now</button></div>
                             </div>
                             <div class="text-card-sec5">
                                 <p class="p1-text-sec5">{{product.product_name}}</p>

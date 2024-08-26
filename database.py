@@ -25,6 +25,11 @@ def add_product(connection,name,price,saleprice,photo,sale):
     cursor.execute(query, (name,photo, price,saleprice,sale))
     connection.commit()
 
+def search_products(connection, search_query):
+    cursor = connection.cursor()
+    query = '''SELECT * FROM products WHERE product_name LIKE ?'''
+    cursor.execute(query,(f"%{search_query}%",))
+    return cursor.fetchall()
 # def get_products(connection):
 #     cursor = connection.cursor()
 #     query= ''' SELECT * FROM products '''

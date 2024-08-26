@@ -451,10 +451,10 @@ footer {
     max-width: 600px;
     width: 100%;
     margin: 0 30px;
-    border: 5px solid #6e7051;
-    bottom: 60%;
+    border: 2px solid #6e7051;
 }
 .search-box input{
+    position: absolute;
     border: 1px solid var(--border-color);
     background-color: var(--panel-color);
     padding: 0 25px 0 50px;
@@ -467,7 +467,11 @@ footer {
     outline: none;
 }
 .search-box i{
+    position: absolute;
     left: 15px;
     font-size: 22px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--black-light-color);
 }

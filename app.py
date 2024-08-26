@@ -154,11 +154,15 @@ def DeleteProduct(id):
     else:
         return("Not Found")
     
-@app.route('/Collection')
+@app.route('/Collection', methods=['GET','POST'])
 def collection():
     if 'username' in session:
         products = []
-        products = connection.execute(f"SELECT * FROM products").fetchall()
+        if request.method == 'POST':
+            search_query = request.form['search_query']
+            products = db.search_products(connection, search_query)
+        else:
+            products = connection.execute(f"SELECT * FROM products").fetchall()
         productCount = len(products)
         return render_template("collection.html",Products=products,count = productCount)
     else:
@@ -169,6 +173,13 @@ def collection():
 def cart():
     if 'username' in session:
         return render_template("mina.html")
+    else:
+        return redirect(url_for('Login'))
+
+@app.route('/Contact')
+def contact():
+    if 'username' in session:
+        return render_template("contact.html")
     else:
         return redirect(url_for('Login'))
 
