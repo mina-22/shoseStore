@@ -444,3 +444,30 @@ footer {
       }
     
 }
+
+.search-box{
+    position: relative;
+    height: 45px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 30px;
+    border: 5px solid #6e7051;
+    bottom: 60%;
+}
+.search-box input{
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 25px 0 50px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+}
+.search-box i{
+    left: 15px;
+    font-size: 22px;
+    color: var(--black-light-color);
+}

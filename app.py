@@ -146,3 +146,20 @@ def DeleteProduct(id):
             return("Not Found")
     else:
         return("Not Found")
+    
+@app.route('/Collection')
+def cart():
+    if 'username' in session:
+        products = []
+        products = connection.execute(f"SELECT * FROM products").fetchall()
+        productCount = len(products)
+        return render_template("collection.html",Products=products,count = productCount)
+    else:
+        return redirect(url_for('Login'))
+
+
+# @app.route('/Cart')
+# def cart():
+#     if 'username' in session:
+if __name__ == '__main__':
+    app.run(debug=True)

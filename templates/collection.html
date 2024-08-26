@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/women.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/women.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
 </head>
@@ -18,7 +18,7 @@
         <span class="dropdownn container">
             <div class=" container-navbar mt-3 mb-5 ">
                 <div class="logo-nav " >
-                    <a href="index.html"><img src="img2/site-logo.svg" alt="this is photo"></a>
+                    <a href="./"><img src="img2/site-logo.svg" alt="this is photo"></a>
 
                 </div>
 
@@ -45,12 +45,12 @@
 
             <div class="nav-bar d-flex container mt-5">
                 <div class="logo-nav">
-                    <a href="index.html"><img src="img2/site-logo.svg" alt="this is photo"></a>
+                    <a href="./"><img src="img2/site-logo.svg" alt="this is photo"></a>
                 </div>
                 <div class="list-nav ms-4">
                     <ul class="d-flex">
                         
-                        <a href="collection.html">
+                        <a href="./Collection">
                             <li>COLLECTION</li>
                         </a>
                         <a href="lookbook.html">
@@ -71,7 +71,7 @@
                             <li>CONTACT</li>
                         </a>
                         <li><i class="fa-solid fa-bag-shopping "></i></li>
-                        <li><i class="fa-solid fa-user"></i></li>
+                        <li><a href="./Logout">Log out</a></li>
                     </ul>
                 </div>
             </div>
@@ -89,221 +89,38 @@
                         <div class="left-top-sec1">
                             <h1>Shop</h1>
                             <div class="d-flex">
-                                <div class="botton-search-sec1">
-                                    FILTER SHOES
-                                </div>
-                                <p>Showing all 8 results</p>
+                                <p>Showing all {{count}} Items</p>
                             </div>
                         </div>
+                        <div class="search-box">
+                            <i class="uil uil-search"></i>
+                            <input type="text" placeholder="Search here...">
+                        </div>
                         <div class="right-top-sec1 d-flex">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Default sorting
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Default sorting </a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by popularity</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by average rating</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by latest</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by price : low to high</a></li>
-                                    <li><a class="dropdown-item" href="#">Sort by price : high to low</a></li>
-                                </ul>
-                            </div>
                             <div class="d-flex icons-sec1 mt-2">
                                 <i class="fa-regular fa-image me-3" id="cardShow"></i>
                                 <i class="fa-solid fa-bars" id="discriptionCardShow"></i>
                             </div>
                         </div>
                     </div>
-
                     <div class="underline-p-sec5"></div>
                     <div class="cards-sec5 row mt-5">
+                    {% for product in Products %}
                         <div class="card-sec5 col-4 items card" >
                             <div class="img-card-sec5 img-card">
-                                <img src="img2/shose28.jpg" alt="">
+                                <img src={{"../static/img2/" + product.image_path}} alt="">
                                 <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                             </div>
                             <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Men’s Earth-Tone Sneaker</p>
-                                <p class="p2-text-sec5">$74.90</p>
-                                <div class="description-card" >
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-    
-                        </div>
-                        <div class="card-sec5 col-4 items card" >
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose29.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Men’s Green Running</p>
-                                <p class="p2-text-sec5"><del>$104.90 </del>  $89.90</p>
+                                <p class="p1-text-sec5">{{product.product_name}}</p>
+                                <p class="p2-text-sec5"><del>{{product.price}} </del> {{product.sale_price}}</p>
                                 <div class="description-card" >
                                     <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-sec5 col-4 items card" >
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose30.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Men’s Moonstone Sneaker</p>
-                                <p class="p2-text-sec5">$74.90</p>
-                                <div class="description-card" >
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-sec5 col-4 items card">
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose36.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view
-                                </div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Women’s Cream Suede</p>
-                                <p class="p2-text-sec5">$74.90</p>
-                                <div class="description-card">
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet,
-                                        nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas
-                                        magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card-sec5 col-4 items card">
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose37.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view
-                                </div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Women’s Cream Suede</p>
-                                <p class="p2-text-sec5"><del>$104.90 </del> $89.90</p>
-                                <div class="description-card">
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet,
-                                        nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas
-                                        magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-sec5 col-4 items card">
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose38.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view
-                                </div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Women’s Mint Sneaker</p>
-                                <p class="p2-text-sec5">$74.90</p>
-                                <div class="description-card">
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet,
-                                        nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas
-                                        magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards-sec5 row mt-5">
-                        <div class="card-sec5 col-4 items card">
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose39.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view
-                                </div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Women’s Orange Sneaker</p>
-                                <p class="p2-text-sec5">$104.90</p>
-                                <div class="description-card">
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet,
-                                        nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas
-                                        magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card-sec5 col-4 items card">
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose40.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view
-                                </div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Women’s Peach Training</p>
-                                <p class="p2-text-sec5"><del>$79.90 </del> $69.90</p>
-                                <div class="description-card">
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet,
-                                        nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas
-                                        magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-sec5 col-4 items card">
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose41.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view
-                                </div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Women’s Pink Suede</p>
-                                <p class="p2-text-sec5"><del>$79.90 </del> $69.90</p>
-                                <div class="description-card">
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet,
-                                        nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas
-                                        magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-sec5 col-4 items card" >
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose25.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-    
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Men’s Black Running</p>
-                                <p class="p2-text-sec5">$79.90</p>
-                                <div class="description-card "  >
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-    
-                        </div>
-                        <div class="card-sec5 col-4 items card" >
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose26.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Men’s Classic Blue</p>
-                                <p class="p2-text-sec5"><del>$79.90 </del>  $69.00</p>
-                                <div class="description-card" >
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-sec5 col-4 items card" >
-                            <div class="img-card-sec5 img-card">
-                                <img src="img2/shose27.jpg" alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                            </div>
-                            <div class="text-card-sec5">
-                                <p class="p1-text-sec5">Men’s Classic Mint</p>
-                                <p class="p2-text-sec5">$79.90</p>
-                                <div class="description-card" >
-                                    <p>Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        
-                    </div>
-                </div>
+                {% endfor %}
+            </div>
             </div>
         </section>
 
@@ -314,18 +131,6 @@
                 <div class="text-last-sec ">
                     <h2>Better for People & the Planet</h2>
                     <p>Ut eget at et aliquam sit quis nisl, pharetra et ac pharetra est dictum in vulputate</p>
-                    <div class="d-flex justify-content-center btns-last-sec">
-                        <a href="#">
-                            <div class="btn-last-sec">
-                                MEN SHOP
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="btn-last-sec">
-                                WOMEN SHOP
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
