@@ -176,10 +176,23 @@ def cart():
     else:
         return redirect(url_for('Login'))
 
-@app.route('/Contact')
-def contact():
+@app.route('/Contact', methods=['GET', 'POST'])
+def Contact():
     if 'username' in session:
-        return render_template("contact.html")
+        if request.method == 'POST':
+            name = request.form["name"]
+            email = request.form["email"]
+            comment = request.form["comment"]
+            username = request.args.get('username', session['username'])
+            user = db.get_user(connection, username)
+            if name and email and comment:
+                db.add_comment(connection, user['user_id'], name, email, comment)
+                flash("Comment has been sent", "success")
+            else:
+                flash("Please fill all the fields", "danger")
+            return render_template("contact.html")
+        if request.method == 'GET':
+            return render_template("contact.html")
     else:
         return redirect(url_for('Login'))
 
