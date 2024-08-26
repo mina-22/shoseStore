@@ -10,7 +10,7 @@ def add_user(connection,email,username,password):
     cursor = connection.cursor()
     hashed_password = utils.hash_password(password)
     query = '''INSERT INTO users (email,username, password,admin) VALUES (?,?,?,?)'''
-    cursor.execute(query, (email,username, hashed_password,1))
+    cursor.execute(query, (email,username, hashed_password,0))
     connection.commit()
 
 def get_user(connection, username):
