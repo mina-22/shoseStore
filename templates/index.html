@@ -81,10 +81,6 @@
                     <h1>Love the Planet we walk on</h1>
                     <p>Bibendum fermentum, aenean donec pretium aliquam blandit tempor imperdiet arcu arcu ut nunc in
                         dictum mauris at ut.</p>
-                    <div class="btn-sec1">
-                        <a href="#"><button class="btns-sec1">SHOP MEN</button></a>
-                        <a href="#"><button class="btns-sec1">SHOP WOMEN</button></a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -170,67 +166,18 @@
                 <div class="underline-p-sec5"></div>
             </div>
             <div class="cards-sec5 row mt-5">
+                {% for product in Products %}
                 <div class="card-sec5 col-4">
                     <div class="img-card-sec5">
-                        <img src="img2/shose1.jpg" alt="">
+                        <img src={{"../static/img2/" + product.image_path}} alt="">
                         <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                     </div>
                     <div class="text-card-sec5">
-                        <p class="p1-text-sec5">Women’s Peach Training</p>
-                        <p class="p2-text-sec5"><del>$79.90</del> $69.00</p>
-                    </div>
-
-                </div>
-                <div class="card-sec5 col-4">
-                    <div class="img-card-sec5">
-                        <img src="img2/shose2.jpg" alt="">
-                        <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                    </div>
-                    <div class="text-card-sec5">
-                        <p class="p1-text-sec5">Women’s Choco City Run</p>
-                        <p class="p2-text-sec5"><del>$79.90</del> $69.00</p>
+                        <p class="p1-text-sec5">{{product.product_name}}</p>
+                        <p class="p2-text-sec5"><del>${{product.price}} </del> ${{product.sale_price}}</p>
                     </div>
                 </div>
-                <div class="card-sec5 col-4">
-                    <div class="img-card-sec5">
-                        <img src="img2/shose3.jpg" alt="">
-                        <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                    </div>
-                    <div class="text-card-sec5">
-                        <p class="p1-text-sec5">Women’s Mint Sneaker</p>
-                        <p class="p2-text-sec5"><del>$79.90</del> $69.00</p>
-                    </div>
-                </div>
-                <div class="card-sec5 col-4">
-                    <div class="img-card-sec5">
-                        <img src="img2/shose4.jpg" alt="">
-                        <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                    </div>
-                    <div class="text-card-sec5">
-                        <p class="p1-text-sec5">Men’s Classic Mint</p>
-                        <p class="p2-text-sec5"><del>$79.90</del> $69.00</p>
-                    </div>
-                </div>
-                <div class="card-sec5 col-4">
-                    <div class="img-card-sec5">
-                        <img src="img2/shose5.jpg" alt="">
-                        <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                    </div>
-                    <div class="text-card-sec5">
-                        <p class="p1-text-sec5">Men’s Black Running</p>
-                        <p class="p2-text-sec5"><del>$79.90</del> $69.00</p>
-                    </div>
-                </div>
-                <div class="card-sec5 col-4">
-                    <div class="img-card-sec5">
-                        <img src="img2/shose6.jpg" alt="">
-                        <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
-                    </div>
-                    <div class="text-card-sec5">
-                        <p class="p1-text-sec5">Men’s Red Running</p>
-                        <p class="p2-text-sec5"><del>$79.90</del>$69.00</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
             </div>
@@ -246,13 +193,11 @@
                     <div class="card1-sec6 d-flex align-items-center justify-content-center">
                         <div class="text-sec6 ">
                             <p>MEN</p>
-                            <a href="#"><button>SHOP MEN</button></a>
                         </div>
                     </div>
                     <div class="card2-sec6 d-flex align-items-center justify-content-center">
                         <div class="text-sec6">
                             <p>WOMEN</p>
-                            <a href="#"><button>SHOP WOMEN</button></a>
                         </div>
                     </div>
                 </div>
@@ -445,18 +390,6 @@
                 <div class="text-last-sec ">
                     <h2>Better for People & the Planet</h2>
                     <p>Ut eget at et aliquam sit quis nisl, pharetra et ac pharetra est dictum in vulputate</p>
-                    <div class="d-flex justify-content-center btns-last-sec">
-                        <a href="#">
-                            <div class="btn-last-sec">
-                                MEN SHOP
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="btn-last-sec">
-                                WOMEN SHOP
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -482,8 +415,7 @@
                 </div>
                 <div class="part1-foot">
                     <h3>Shop</h3>
-                    <p><a href="men.html">Shop Men</a></p>
-                    <p><a href="women.html">Shop Women</a></p>
+                    <p><a href="./Collection">Collection</a></p>
                     <p><a href="lookbook.html">Lookbook</a></p>
                     <p><a href="#">Gift Card</a></p>
                     <p><a href="sale.html">Sale</a></p>

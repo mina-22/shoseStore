@@ -3,6 +3,9 @@ import database as db
 import utils
 import Validation
 import sqlite3
+import os
+
+UPLOADS_FOLDER = 'static/img2/'
 
 app = Flask(__name__)
 
@@ -10,13 +13,16 @@ connection = db.connect_to_database()
 connection.row_factory = sqlite3.Row
 
 app.secret_key = "SUPER-SECRET"
+app.config['UPLOADS_FOLDER'] = UPLOADS_FOLDER
+
 @app.route('/')
 def index():
     if 'username' in session:
         if session['adminRole'] == 1:
             return render_template('adminDashborad.html')
         else:
-            return render_template('index.html')
+            products = connection.execute(f"SELECT * FROM products").fetchall()
+            return render_template('index.html', Products = products)
     return redirect(url_for('Login'))
 
 @app.route('/Login', methods=['GET', 'POST'])
@@ -116,14 +122,15 @@ def AddProduct():
                     return render_template('AddProduct.html')
                 if ProductSalePrice==0:
                     sale = False
+                photo.save(os.path.join(app.config['UPLOADS_FOLDER'], photo.filename))
                 db.add_product(connection,ProductName,ProductPrice,ProductSalePrice,photo.filename,sale)
                 return render_template('adminDashborad.html')
             else:
                 return render_template("AddProduct.html")
         else:
-            return "not Foundd"    
+            return "Not Found"    
     else:
-        return "not Found"
+        return "Not Found"
 @app.route('/ViewProduct')
 def ViewProduct():
     if 'username' in session:
@@ -148,7 +155,7 @@ def DeleteProduct(id):
         return("Not Found")
     
 @app.route('/Collection')
-def cart():
+def collection():
     if 'username' in session:
         products = []
         products = connection.execute(f"SELECT * FROM products").fetchall()
@@ -158,8 +165,12 @@ def cart():
         return redirect(url_for('Login'))
 
 
-# @app.route('/Cart')
-# def cart():
-#     if 'username' in session:
+@app.route('/Cart')
+def cart():
+    if 'username' in session:
+        return render_template("mina.html")
+    else:
+        return redirect(url_for('Login'))
+
 if __name__ == '__main__':
     app.run(debug=True)
