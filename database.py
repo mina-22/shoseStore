@@ -39,6 +39,53 @@ def add_comment(connection, userid, name, email,message):
                    ''',(userid, name, email, message))
     connection.commit()
 
+
+def add_order(connection, product_id,price,user_id):
+    price=float(price)
+    product_id=int(product_id)
+    cursor=connection.cursor()
+    query = '''INSERT INTO orders (user_id,product_id,total_price,purchased) VALUES (?,?,?,?)'''
+    cursor.execute(query,(user_id,product_id,price,0,))
+    connection.commit()
+
+def get_id_user(connection,username):
+    cursor=connection.cursor()
+    query = '''SELECT user_id FROM users WHERE username = ?'''
+    cursor.execute(query, (username,))
+    return cursor.fetchone()[0]
+
+
+def get_all_orders(connection,id):
+    cursor = connection.cursor()
+    query='''SELECT * FROM orders WHERE user_id=? AND purchased=0'''
+    cursor.execute(query,(id,))
+    return cursor.fetchall()
+
+def get_product(connection,id):
+    cursor=connection.cursor()
+    query=''' SELECT * FROM products WHERE product_id=? '''
+    cursor.execute(query,(id,))
+    return cursor.fetchone()
+
+
+def Buy_Now(connection,id):
+    cursor=connection.cursor()
+    query='''   UPDATE orders SET purchased = 1 WHERE user_id = ?  '''
+    cursor.execute(query,(id,))
+    connection.commit()
+
+
+def Edit_Product(connection,id,name,price,saleprice,photo,sale):
+    cursor = connection.cursor()
+    if photo=="":
+        query = ''' UPDATE products SET product_name = ?, price = ?, on_sale = ? , sale_price=? WHERE product_id = ? '''
+        cursor.execute(query,(name,price,sale,saleprice,id,))
+        connection.commit()
+    else:
+        query = ''' UPDATE products SET product_name = ? , image_path=? , price = ?, on_sale = ? , sale_price=?  WHERE product_id = ? '''
+        cursor.execute(query,(name,photo,price,sale,saleprice,id,))
+        connection.commit()
+
 # def get_products(connection):
 #     cursor = connection.cursor()
 #     query= ''' SELECT * FROM products '''
@@ -73,7 +120,6 @@ def add_comment(connection, userid, name, email,message):
 #     product_id INTEGER NOT NULL,
 #     total_price REAL NOT NULL,
 #     purchased INTEGER NOT NULL,
-#     time TEXT NOT NULL,
 #     FOREIGN KEY(product_id) REFERENCES products(product_id),
 #     FOREIGN KEY(user_id) REFERENCES users(user_id)
 #     )
@@ -96,9 +142,15 @@ def add_comment(connection, userid, name, email,message):
 # '''
 # )
 
+def delete_order(connection,id):
+    cursor=connection.cursor()
+    query=''' DELETE FROM orders WHERE purchased =0 And product_id=? '''
+    cursor.execute(query,(id,))
+    connection.commit()
+
 # cursor.execute('''
-#     DELETE FROM products WHERE product_id =3;
-    
+#     DELETE FROM orders WHERE purchased =0  
+   
 # '''
 # )
 
@@ -109,5 +161,10 @@ def add_comment(connection, userid, name, email,message):
    
 # '''
 # )
+
+
+# cursor.execute('''
+#     DROP TABLE orders
+# ''')
 
 connection.commit()

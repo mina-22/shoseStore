@@ -13,74 +13,56 @@
 </head>
 
 <body>
-
-
     <header>
         <span class="dropdownn container">
-            <div class=" container-navbar mt-3 mb-5 ">
-                <div class="logo-nav " >
+            <div class="  mt-3 mb-5 container-navbar">
+                <div class="logo-nav ">
                     <a href="./"><img src="../static/img2/site-logo.svg" alt="this is photo"></a>
 
                 </div>
-
-
-
-                <div class="ms-auto drop-navbar">
-                    <i class="fa-solid fa-bars dropdown-toggle dropdownn" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                <div class="ms-auto drop-navbar" >
+                    <i class="fa-solid fa-bars dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu">
-                        
-                        <li><a class="dropdown-item" href="collection.html">COLLECTION</a></li>
-                        <li><a class="dropdown-item" href="lookbook.html">LOOKBOOK</a></li>
-                        <li><a class="dropdown-item" href="sale.html">SALE</a></li>
-                        <li><a class="dropdown-item" href="ourStory.html">OUR STORY</a></li>
+                        <li><a class="dropdown-item" href="./collection">COLLECTION</a></li>
+                        <li><a class="dropdown-item" href="./lookbook">LOOKBOOK</a></li>
+                        <li><a class="dropdown-item" href="./ourStory">OUR STORY</a></li>
                         <li><a class="dropdown-item" href="./Contact">CONTACT</a></li>
-                        <li><a class="dropdown-item" href="./Contact"><i class="fa-solid fa-bag-shopping "></i> <i
-                                    class="fa-solid fa-user"></i></a></li>
-
+                        <li><a class="dropdown-item" href="./Cart"><i class="fa-solid fa-bag-shopping "></i></a><a href="./Logout">Log out</a></li>
                     </ul>
                 </div>
-
             </div>
         </span>
         <nav>
-
             <div class="nav-bar d-flex container mt-5">
                 <div class="logo-nav">
                     <a href="./"><img src="../static/img2/site-logo.svg" alt="this is photo"></a>
                 </div>
                 <div class="list-nav ms-4">
                     <ul class="d-flex">
-                        
                         <a href="./Collection">
                             <li>COLLECTION</li>
                         </a>
-                        <a href="lookbook.html">
+                        <a href="/lookbook">
                             <li>LOOKBOOK</li>
-                        </a>
-                        <a href="sale.html">
-                            <li>SALE</li>
                         </a>
                     </ul>
                 </div>
                 <div class="list2-nav">
                     <ul class="d-flex">
 
-                        <a href="ourStory.html">
+                        <a href="/ourStory">
                             <li>OUR STORY</li>
                         </a>
                         <a href="./Contact">
                             <li>CONTACT</li>
                         </a>
-                        <li><i class="fa-solid fa-bag-shopping "></i></li>
+                        <li><a href="./Cart"><i class="fa-solid fa-bag-shopping "></i></a></li>
                         <li><a href="./Logout">Log out</a></li>
                     </ul>
                 </div>
             </div>
-
         </nav>
     </header>
-
-
     <main>
         <!-- START OF SECTION ONE -->
         <section class="sec1 ">
@@ -114,8 +96,8 @@
                     {% for product in Products %}
                         <div class="card-sec5 col-4 items card" >
                             <div class="img-card-sec5 img-card">
-                                <img src={{"../static/img2/" + product.image_path}} alt="">
-                                <div class="under-card d-flex align-items-center justify-content-center"><button>Buy Now</button></div>
+                                <img src="{{ '../static/img2/' + product.image_path }}" alt="">
+                                <div class="under-card d-flex align-items-center justify-content-center"><a href="{{ url_for('AddToCart', product_id=product.product_id, price=product.price) }}"><button>Add To Cart</button></a></div>
                             </div>
                             <div class="text-card-sec5">
                                 <p class="p1-text-sec5">{{product.product_name}}</p>
@@ -141,14 +123,12 @@
             </div>
         </section>
     </main>
-
-
     <footer>
         <div class="foot container ">
             <div class="parent-foot ">
                 <div class="part1-foot">
                     <div class="logo-foot">
-                        <img src="img2/site-logo.svg" alt="this is photo">
+                        <img src="../static/img2/site-logo.svg" alt="this is photo">
                     </div>
                     <p>Praesent eget tortor sit risus egestas nulla pharetra ornare quis bibendum est bibendum sapien
                         proin
@@ -162,12 +142,9 @@
                 </div>
                 <div class="part1-foot">
                     <h3>Shop</h3>
-                    <p><a href="men.html">Shop Men</a></p>
-                    <p><a href="women.html">Shop Women</a></p>
-                    <p><a href="lookbook.html">Lookbook</a></p>
+                    <p><a href="./Collection">Collection</a></p>
+                    <p><a href="./lookbook">Lookbook</a></p>
                     <p><a href="#">Gift Card</a></p>
-                    <p><a href="sale.html">Sale</a></p>
-
 
                 </div>
                 <div class="part1-foot">
@@ -192,8 +169,6 @@
 
         </div>
     </footer>
-
-
     <script src="JS/main.js"></script>
     <script src="JS/bootstrap.bundle.min.js"></script>
 </body>

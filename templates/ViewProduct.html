@@ -37,7 +37,10 @@
                     <i class="uil uil-chart"></i>
                     <span class="link-name">View Product</span>
                 </a></li>
-                
+                <li><a href="./ViewComents">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">View Coments</span>
+                </a></li>
             </ul>
             
             <ul class="logout-mode">
@@ -80,40 +83,39 @@
                 </div>
             </div>
             <div>
-                    <table class="table table-striped">
-                        <thead>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td class="table-light">id</td>
+                            <td class="table-light">Name</td>
+                            <td class="table-light">price</td>
+                            <td class="table-light">sale price</td>
+                            <td class="table-light">operation</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in Products %}
                             <tr>
-                                <td class="table-light">id</td>
-                                <td class="table-light">Name</td>
-                                <td class="table-light">price</td>
-                                <td class="table-light">sale price</td>
-                                <td class="table-light">operation</td>
+                                <td>{{product.product_id}}</td>
+                                <td>{{product.product_name}}</td>
+                                <td>{{product.price}}</td>
+                                <td>{{product.sale_price}}</td>
+                                <td>
+                                    <a class="btn btn-success" href="{{ url_for('EditProduct',id=product.product_id)}}" role="button">
+                                        <span class="material-symbols-outlined">
+                                            Edit
+                                        </span>
+                                    </a>
+                                    <a class="btn btn-danger " href="{{ url_for('DeleteProduct',id=product.product_id)}}" role="button">
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </a>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {% for product in Products %}
-                                <tr>
-                                    <td>{{product.product_id}}</td>
-                                    <td>{{product.product_name}}</td>
-                                    <td>{{product.price}}</td>
-                                    <td>{{product.sale_price}}</td>
-                                    <td>
-                                        <a class="btn btn-success" role="button">
-                                            <span class="material-symbols-outlined">
-                                                add
-                                            </span>
-                                        </a>
-                                        <a class="btn btn-danger " href="{{ url_for('DeleteProduct',id=product.product_id)}}" role="button">
-                                            <span class="material-symbols-outlined">
-                                                delete
-                                            </span>
-                                        </a>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-               
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>

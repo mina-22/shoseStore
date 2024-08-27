@@ -23,20 +23,16 @@
                 <div class="ms-auto drop-navbar" >
                     <i class="fa-solid fa-bars dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="men.html">MEN </a></li>
-                        <li><a class="dropdown-item" href="women.html">WOMEN</a></li>
-                        <li><a class="dropdown-item" href="collection.html">COLLECTION</a></li>
-                        <li><a class="dropdown-item" href="lookbook.html">LOOKBOOK</a></li>
-                        <li><a class="dropdown-item" href="ourStory.html">OUR STORY</a></li>
+                        <li><a class="dropdown-item" href="./collection">COLLECTION</a></li>
+                        <li><a class="dropdown-item" href="./lookbook">LOOKBOOK</a></li>
+                        <li><a class="dropdown-item" href="./ourStory">OUR STORY</a></li>
                         <li><a class="dropdown-item" href="./Contact">CONTACT</a></li>
-                        <li><a class="dropdown-item" href="./Contact"><i class="fa-solid fa-bag-shopping "></i></a><a href="./Logout">Log out</a></li>
+                        <li><a class="dropdown-item" href="./Cart"><i class="fa-solid fa-bag-shopping "></i></a><a href="./Logout">Log out</a></li>
                     </ul>
                 </div>
-
             </div>
         </span>
         <nav>
-
             <div class="nav-bar d-flex container mt-5">
                 <div class="logo-nav">
                     <a href="./"><img src="../static/img2/site-logo.svg" alt="this is photo"></a>
@@ -46,7 +42,7 @@
                         <a href="./Collection">
                             <li>COLLECTION</li>
                         </a>
-                        <a href="lookbook.html">
+                        <a href="./lookbook">
                             <li>LOOKBOOK</li>
                         </a>
                     </ul>
@@ -54,7 +50,7 @@
                 <div class="list2-nav">
                     <ul class="d-flex">
 
-                        <a href="ourStory.html">
+                        <a href="/ourStory">
                             <li>OUR STORY</li>
                         </a>
                         <a href="./Contact">
@@ -65,7 +61,6 @@
                     </ul>
                 </div>
             </div>
-
         </nav>
     </header>
 
@@ -129,7 +124,7 @@
                     </div>
                     <div class="img-bottom-sec4">
                         <div>
-                            <img src="img2/img-sec4.png" alt="">
+                            <img src="../static/img2/img-sec4.png" alt="">
                         </div>
                     </div>
                     <div class="cards-bottom-sec4">
@@ -165,7 +160,7 @@
                 {% for product in Products %}
                 <div class="card-sec5 col-4">
                     <div class="img-card-sec5">
-                        <img src={{"../static/img2/" + product.image_path}} alt="">
+                        <img src="{{ '../static/img2/' + product.image_path }}" alt="">
                         <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                     </div>
                     <div class="text-card-sec5">
@@ -215,7 +210,7 @@
                 <div class="cards-sec5 row mt-5">
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose7.jpg" alt="">
+                            <img src="../static/img2/shose7.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -226,7 +221,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose8.jpg" alt="">
+                            <img src="../static/img2/shose8.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -236,7 +231,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose9.jpg" alt="">
+                            <img src="../static/img2/shose9.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -246,7 +241,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose10.jpg" alt="">
+                            <img src="../static/img2/shose10.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -257,7 +252,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose11.jpg" alt="">
+                            <img src="../static/img2/shose11.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -267,7 +262,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose12.jpg" alt="">
+                            <img src="../static/img2/shose12.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -280,7 +275,7 @@
                 <div class="cards-sec5 row mt-5">
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose13.jpg" alt="">
+                            <img src="../static/img2/shose13.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -291,7 +286,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose14.jpg" alt="">
+                            <img src="../static/img2/shose14.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -301,7 +296,7 @@
                     </div>
                     <div class="card-sec5 col-4">
                         <div class="img-card-sec5">
-                            <img src="img2/shose15.jpg" alt="">
+                            <img src="../static/img2/shose15.jpg" alt="">
                             <div class="under-card d-flex align-items-center justify-content-center">Quick view</div>
                         </div>
                         <div class="text-card-sec5">
@@ -325,14 +320,14 @@
                         vulputate sem aliquet phasellus egestas felis, est, vulputate morbi massa mauris vestibulum dui
                         odio.</p>
                     <div class="d-flex logos-sec8">
-                        <div class="logo-sec8"><img src="img2/logo1.svg" alt=""></div>
-                        <div class="logo-sec8"> <img src="img2/logo2.svg" alt=""></div>
-                        <div class="logo-sec8"> <img src="img2/logo3.svg" alt=""></div>
+                        <div class="logo-sec8"><img src="../static/img2/logo1.svg" alt=""></div>
+                        <div class="logo-sec8"> <img src="../static/img2/logo2.svg" alt=""></div>
+                        <div class="logo-sec8"> <img src="../static/img2/logo3.svg" alt=""></div>
                     </div>
                 </div>
                 <div class="right-sec8">
 
-                 <img src="img2/recycled-shoe-store-recycled-circle-iamge.jpg" alt="this is photo"
+                 <img src="../static/img2/recycled-shoe-store-recycled-circle-iamge.jpg" alt="this is photo"
                     style="border-radius: 50%;">
 
                 </div>
@@ -351,7 +346,7 @@
                         <p>“Felis semper duis massa scelerisque ac amet porttitor ac tellus venenatis aliquam varius
                             mauris integer”</p>
                         <div class="img-user d-flex">
-                            <img src="img2/recycled-shoe-store-customer-avatar-image-3.jpg" alt="this is photo">
+                            <img src="../static/img2/recycled-shoe-store-customer-avatar-image-3.jpg" alt="this is photo">
                             <p>JULIA KEYS</p>
                         </div>
                     </div>
@@ -359,7 +354,7 @@
                         <p>“Felis semper duis massa scelerisque ac amet porttitor ac tellus venenatis aliquam varius
                             mauris integer”</p>
                         <div class="img-user d-flex">
-                            <img src="img2/recycled-shoe-store-customer-avatar-image-2.jpg" alt="this is photo">
+                            <img src="../static/img2/recycled-shoe-store-customer-avatar-image-2.jpg" alt="this is photo">
                             <p>
                                 LUIS ADRIAN</p>
                         </div>
@@ -368,7 +363,7 @@
                         <p>“Felis semper duis massa scelerisque ac amet porttitor ac tellus venenatis aliquam varius
                             mauris integer”</p>
                         <div class="img-user d-flex">
-                            <img src="img2/recycled-shoe-store-customer-avatar-image-1.jpg" alt="this is photo">
+                            <img src="../static/img2/recycled-shoe-store-customer-avatar-image-1.jpg" alt="this is photo">
                             <p> MARIA ANNA</p>
                         </div>
                     </div>
@@ -397,7 +392,7 @@
             <div class="parent-foot ">
                 <div class="part1-foot">
                     <div class="logo-foot">
-                        <img src="img2/site-logo.svg" alt="this is photo">
+                        <img src="../static/img2/site-logo.svg" alt="this is photo">
                     </div>
                     <p>Praesent eget tortor sit risus egestas nulla pharetra ornare quis bibendum est bibendum sapien
                         proin
@@ -412,7 +407,7 @@
                 <div class="part1-foot">
                     <h3>Shop</h3>
                     <p><a href="./Collection">Collection</a></p>
-                    <p><a href="lookbook.html">Lookbook</a></p>
+                    <p><a href="./lookbook">Lookbook</a></p>
                     <p><a href="#">Gift Card</a></p>
 
                 </div>

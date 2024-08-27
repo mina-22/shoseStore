@@ -13,12 +13,12 @@ def accepted_file_size(file):
     return file_size <= MAX_FILE_SIZE_BYTES
 
 def priceVaild(price):
-    if int(price) <5 and int(price)>500:
+    if float(price) <5 and float(price)>500:
         return False 
     else:
         return True
 def PriceSaleValdi(Sale,Price):
-    if int(Sale) >=int(Price) or int(Sale)<0:
+    if float(Sale) >=float(Price) or float(Sale)<0:
         return False
     else:
         return True
